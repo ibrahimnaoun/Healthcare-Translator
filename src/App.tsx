@@ -1,5 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { translateText } from "./translate";
+// For browser compatibility
+const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+type SpeechRecognition = typeof SpeechRecognition;
+type SpeechRecognitionEvent = any; // workaround for now
 
 declare global {
   interface Window {
@@ -46,7 +50,7 @@ function App() {
       }
     };
 
-    recognition.onerror = (event) => {
+    recognition.onerror = (event: any) => {
       console.error("Speech recognition error:", event.error);
     };
 
