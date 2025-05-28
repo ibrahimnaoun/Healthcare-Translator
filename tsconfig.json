@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "lib": ["DOM", "ES6"],
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "target": "es6",
+    "module": "esnext",
+    "lib": ["dom", "es6"],
+    "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["node"],
-    "resolveJsonModule": true
+    "composite": true
   },
   "include": ["src"],
   "references": [
@@ -17,4 +17,3 @@
     { "path": "./tsconfig.node.json" }
   ]
 }
-

@@ -14,7 +14,7 @@ export async function translateText(inputText: string,
           {
             parts: [
               {
-                text: `Translate this medical sentence to ${targetLang}. ONLY return the translated sentence with correct medical terms translations — no explanations, no alternatives.\n\nSentence: "${inputText}"`
+                text: `Translate this medical sentence from ${sourceLang} to ${targetLang}. ONLY return the translated sentence with correct medical terms translations — no explanations, no alternatives.\n\nSentence: "${inputText}"`
               }
             ]
           }
