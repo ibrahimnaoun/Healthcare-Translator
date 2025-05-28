@@ -1,54 +1,29 @@
-# React + TypeScript + Vite
+# Healthcare Translation Web App with Generative AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A real-time multilingual translation app for healthcare settings, enabling communication between patients and providers through speech-to-text, translation, and audio playback.
 
-Currently, two official plugins are available:
+## Features
+- 🎤 Voice-to-text transcription (Web Speech API)
+- 🌐 Real-time AI translation (OpenAI API)
+- 🔊 Audio playback of translated text
+- 📱 Mobile-first, responsive UI
+- 🌍 Language selector for input/output
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- React + TypeScript
+- Web Speech API (for speech recognition)
+- OpenAI API (for translation)
+- Vercel (for deployment)
 
-## Expanding the ESLint configuration
+## Security
+- No data storage
+- Transient in-browser processing
+- OpenAI usage with secure API key via environment variables
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## How to Run Locally
+```bash
+git clone https://github.com/YOUR_USERNAME/Healthcare-Translator.git
+cd Healthcare-Translator
+npm install
+npm run dev
