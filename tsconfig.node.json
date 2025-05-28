@@ -1,17 +1,9 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "composite": true,
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2022",
-    "lib": ["ES2023"],
-    "module": "ESNext",
-    "skipLibCheck": true,
     "moduleResolution": "node",
-    "strict": true,
-    "esModuleInterop": true,
-    "outDir": "./dist",
-    "emitDeclarationOnly": false,
-    "declaration": true
+    "noEmit": false
   },
   "include": ["vite.config.ts"]
 }
